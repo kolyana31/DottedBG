@@ -1,0 +1,41 @@
+body{
+    background: #000;
+}
+
+.containerbg{
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    max-height: 100vh;
+    display: grid;
+    grid-template-rows: repeat(auto-fill,90px);
+    grid-template-columns: repeat(auto-fill,90px);
+    justify-content: space-around;
+    row-gap: 1px;
+    column-gap: 1px;
+    padding: 10px;
+}
+
+.dot{
+    width: 90px;
+    height: 90px; 
+    background-color: rgba(21, 224, 14, 0.623);
+    box-shadow: 0 0 20px rgb(5, 255, 242);
+    border-radius: 50%;
+    transition: 0.5s;
+    animation: blink 10s infinite;
+}
+
+
+.hovered{
+    transform: scale(0.5);
+}
+
+@keyframes blink{
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
